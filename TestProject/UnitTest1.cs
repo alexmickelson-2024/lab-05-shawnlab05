@@ -1,7 +1,5 @@
-using System.ComponentModel.DataAnnotations;
 using MainProgram;
 using static MainProgram.Program;
-using Microsoft.VisualStudio.TestPlatform.TestHost;
 
 namespace TestProject;
 

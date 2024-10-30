@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using static System.Console;
 
 namespace MainProgram
@@ -71,7 +70,7 @@ namespace MainProgram
         {
             Console.Write(prompt);
             string inputAsStr = Console.ReadLine().ToLower();
-            if (inputAsStr != "a" || inputAsStr != "b" || inputAsStr != "c" || inputAsStr != "d" || inputAsStr != "e" || inputAsStr != "f" || inputAsStr != "g" || inputAsStr != "h" || inputAsStr != "i")
+            if (inputAsStr != "a" && inputAsStr != "b" && inputAsStr != "c" && inputAsStr != "d" && inputAsStr != "e" && inputAsStr != "f" && inputAsStr != "g" && inputAsStr != "h" && inputAsStr != "i")
             {
                 return GetMove(prompt, board);
             }
@@ -89,7 +88,7 @@ namespace MainProgram
                     "h" => 7,
                     "i" => 8
                 };
-                if (board[index] != 'X' || board[index] != 'O')
+                if (board[index] != 'X' && board[index] != 'O')
                 {
                     return index;
                 }
@@ -136,7 +135,6 @@ namespace MainProgram
 
             else
                 return false;
-
         }
 
        public static bool CellsAreTheSame(char a, char b, char c)
@@ -159,7 +157,7 @@ namespace MainProgram
 
        public static void MakeMove(char currentPlayer, char[] board)
         {
-            int index = GetMove(($"Player {currentPlayer}: Where do you want to play?"), board);
+            int index = GetMove($"Player {currentPlayer}: Where do you want to play?", board);
             board[index] = currentPlayer;
         }
 
